@@ -5,7 +5,7 @@ homepage: https://github.com/Chun-Bae/gafa_indicator.git
 repository: https://github.com/Chun-Bae/gafa_indicator.git
 
 environment:
-  sdk: '>=3.4.4 <4.0.0'
+  sdk: ">=3.4.4 <4.0.0"
   flutter: ">=3.0.0 <4.0.0"
 
 dependencies:
@@ -22,7 +22,8 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
-
+  assets:
+    - assets/images/
   # To add assets to your package, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg

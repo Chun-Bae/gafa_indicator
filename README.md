@@ -14,6 +14,34 @@ A Flutter widget for creating customizable gradient flow arc indicators with ani
 - Customizable animations via the `flowAnimation` property.
 - Easily adjustable radius, colors, and percentages.
 
+
+### Example Previews
+
+#### Overall View
+![Overall View](assets/images/basic_example.gif)  
+This image provides an overall view of the Gafa Indicator in action.  
+From left to right, the indicators are:  
+`IndicatorType.unfilledStatic`, `IndicatorType.fixedUnfilledEnd`, `IndicatorType.movingUnfilled`, and `IndicatorType.reverseUnfilledShift`.  
+The colors are randomized, and the indicators are displayed in a grid layout.
+
+#### Animation and Customization
+![Animation and Custom View](assets/images/custom_and_animation_example.gif)  
+The Gafa Indicator allows full customization of animations, text, background colors, unfilled colors, and more.  
+This example showcases a single animated indicator with customizable properties.
+
+#### Indicator Types
+A comparison of the different `IndicatorType` values is shown below:
+
+| UnfilledStatic                          | MovingUnfilled                       |
+|-----------------------------------------|---------------------------------------|
+| ![UnfilledStatic](assets/images/type_example_unfilledStatic.gif) | ![MovingUnfilled](assets/images/type_example_movingUnfilled.gif) |
+
+| FixedUnfilledEnd                        | ReverseUnfilledShift                 |
+|-----------------------------------------|---------------------------------------|
+| ![FixedUnfilledEnd](assets/images/type_example_fixedUnfilledEnd.gif) | ![ReverseUnfilledShift](assets/images/type_example_reverseUnfilledShift.gif) |
+
+
+
 ## Getting started
 
 To get started, ensure that you have Flutter installed on your machine. Add the following dependency in your `pubspec.yaml`:
@@ -106,6 +134,9 @@ GradientAniFlowArcIndicator(
 );
 ```
 
-## Additional information
+## Additional Information
+
+If you have any suggestions for better naming conventions for the options or types used in this package, your feedback is greatly appreciated. Let us know through an issue or discussion!
 
 For bug reports, feature requests, or contributions, feel free to open an issue or submit a pull request on [GitHub](https://github.com/Chun-Bae/gafa_indicator.git).
+

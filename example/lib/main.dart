@@ -46,6 +46,16 @@ class HomePage extends StatelessWidget {
               },
               child: Text('View Animation Example'),
             ),
+            SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => TypeExamplePage()),
+                );
+              },
+              child: Text('Type Example'),
+            ),
           ],
         ),
       ),
@@ -151,8 +161,8 @@ class _AnimationExamplePageState extends State<AnimationExamplePage>
           animation: _animation,
           builder: (context, child) {
             return GradientAniFlowArcIndicator(
-              innerRadius: 24,
-              outerRadius: 30,
+              innerRadius: 60,
+              outerRadius: 70,
               // please input constant value
               percentage: percentage,
               colors: [Colors.purple, Colors.blue],
@@ -162,9 +172,9 @@ class _AnimationExamplePageState extends State<AnimationExamplePage>
                 // Use toStringAsFixed(n) to format the value for a cleaner display.
                 '${_animation.value.toStringAsFixed(1)}%',
                 style: TextStyle(
-                  fontSize: 14,
+                  fontSize: 40,
                   fontWeight: FontWeight.bold,
-                  color: Colors.redAccent,
+                  color: Colors.blueAccent,
                 ),
               ),
               innerCircleColor: Colors.amber,
@@ -173,6 +183,49 @@ class _AnimationExamplePageState extends State<AnimationExamplePage>
               type: IndicatorType.unfilledStatic,
             );
           },
+        ),
+      ),
+    );
+  }
+}
+
+class TypeExamplePage extends StatelessWidget {
+  final List<IndicatorType> indicatorTypes = [
+    IndicatorType.unfilledStatic,
+    IndicatorType.fixedUnfilledEnd,
+    IndicatorType.movingUnfilled,
+    IndicatorType.reverseUnfilledShift,
+  ];
+
+  List<Color> _generateRandomColors() {
+    final random = Random();
+    return [
+      Color.fromARGB(
+          255, random.nextInt(256), random.nextInt(256), random.nextInt(256)),
+      Color.fromARGB(
+          255, random.nextInt(256), random.nextInt(256), random.nextInt(256)),
+    ];
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Basic Example'),
+        backgroundColor: Colors.white,
+      ),
+      backgroundColor: Colors.white,
+      body: Center(
+        child: GradientAniFlowArcIndicator(
+          innerRadius: 60,
+          outerRadius: 70,
+          percentage: 77.7,
+          colors: [Colors.lime.shade100, Colors.lightGreen],
+          unfilledColor: Colors.black,
+          centerText: null,
+          innerCircleColor: Colors.white,
+          enableAnimation: true,
+          type: IndicatorType.fixedUnfilledEnd,
         ),
       ),
     );
